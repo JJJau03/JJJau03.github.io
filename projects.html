@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Juan José Jáuregui Barba</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="bg-elements">
+      <div class="circle"></div>
+      <div class="square"></div>
+      <div class="triangle"></div>
+    </div>
+
+    <nav class="glass-nav">
+      <div class="nav-brand">JJJ</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li>
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="projects-main">
+      <section class="section">
+        <div class="section-header">
+          <h1>My <span class="highlight">Projects</span></h1>
+          <div class="divider"></div>
+          <p class="projects-intro">Selected work showcasing my experience in robotics</p>
+          
+          <!-- Filtros de búsqueda -->
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="ros2">ROS2</button>
+            <button class="filter-btn" data-filter="embedded">Embedded Systems</button>
+          </div>
+        </div>
+
+        <!-- Project 1: FPGA Game -->
+        <article class="project-card glass-card" data-category="embedded">
+          <div class="project-header">
+            <h2>FPGA Game Simulation with Unity</h2>
+            <span class="project-meta">John Deere | Feb 2024 </span>
+          </div>
+          <div class="project-content">
+            <div class="media-container">
+              <img src="assets/fpga-unity.png" alt="FPGA and Unity Setup" class="project-image" onclick="toggleVideo('video1')">
+            </div>
+            <div class="project-details">
+              <h3>Key Achievements</h3>
+              <ul class="achievements-list">
+                <li>Programmed Intel FPGA (DE10-Lite) in VHDL</li>
+                <li>Real-time accelerometer data integration with Unity</li>
+                <li>Serial communication between FPGA and laptop</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">FPGA</span>
+                <span class="tag">VHDL</span>
+                <span class="tag">Unity</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: PID Control -->
+        <article class="project-card glass-card" data-category="embedded">
+          <div class="project-header">
+            <h2>DC Motor PID Control System</h2>
+            <span class="project-meta">John Deere | Aug 2024 </span>
+          </div>
+          <div class="project-content">
+            <div class="media-container">
+              <img src="assets/pid-graph.png" alt="PID Tuning Results" class="project-image">
+            </div>
+            <div class="project-details">
+              <h3>Key Achievements</h3>
+              <ul class="achievements-list">
+                <li>Achieved &lt;2% steady-state error</li>
+                <li>40% faster settling time through iterative tuning</li>
+                <li>Arduino + motor encoder implementation</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">PID</span>
+                <span class="tag">Arduino</span>
+                <span class="tag">Control Theory</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Autonomous Navigation -->
+        <article class="project-card glass-card" data-category="embedded">
+          <div class="project-header">
+            <h2>Autonomous Tractor Navigation Using STM32</h2>
+            <span class="project-meta">John Deere | Aug 2024 </span>
+          </div>
+          <div class="project-content">
+            <div class="media-container">
+              <img src="assets/stm32-project.png" alt="Autonomous Tractor Hardware Setup" class="project-image" onclick="toggleVideo('video3')">
+              <video class="project-video" id="video3">
+                <source src="assets/tractor_navigation.mp4" type="video/mp4">
+              </video>
+              <div class="project-buttons">
+                <button class="btn video-btn" onclick="toggleVideo('video3')">
+                  <i class="fas fa-play"></i> Show Demo
+                </button>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3>Key Achievements</h3>
+              <ul class="achievements-list">
+                <li>Developed embedded system with STM32 microcontroller</li>
+                <li>Integrated IMU and motor encoder data for real-time navigation</li>
+                <li>Designed control algorithms for precise trajectory tracking</li>
+                <li>Implemented communication protocols (CAN, UART, I2C, SPI)</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">STM32</span>
+                <span class="tag">Embedded C</span>
+                <span class="tag">RTOS</span>
+                <span class="tag">Communication Protocols</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: ROS2 Robotic Arm -->
+        <article class="project-card glass-card" data-category="ros2">
+          <div class="project-header">
+            <h2>5-DOF Moveo Robotic Arm with ROS2</h2>
+            <span class="project-meta">Personal Project | Jan 2025 </span>
+          </div>
+          <div class="project-content">
+            <div class="media-container">
+              <img src="assets/moveo_ROS2.png" alt="MoveIt2 Simulation in RViz" class="project-image" onclick="toggleVideo('video4')">
+              <video class="project-video" id="video4">
+                <source src="assets/moveo.mp4" type="video/mp4">
+              </video>
+              <div class="project-buttons">
+                <button class="btn video-btn" onclick="toggleVideo('video4')">
+                  <i class="fas fa-play"></i> Show Demo
+                </button>
+                <a href="https://github.com/JJJau03/moveo_RoboticArm_ROS2" class="btn github-btn">
+                  <i class="fab fa-github"></i> ROS2 Repository
+                </a>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3>Key Features</h3>
+              <ul class="achievements-list">
+                <li><strong>URDF/Xacro Modeling</strong>: Parameterized robot description allowing joint/link customization</li>
+                <li><strong>MoveIt2 Integration</strong>: OMPL-based motion planning with collision avoidance</li>
+                <li><strong>Gazebo Simulation</strong>: Physics-based testing of trajectories before hardware deployment</li>
+                <li><strong>ROS2 Control</strong>: Hardware interface for real-time joint control</li>
+                <li><strong>Gripper Functionality</strong>: Custom controller for precision object manipulation</li>
+                <li><strong>RViz Visualization</strong>: Real-time TF frames and trajectory visualization</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">ROS2</span>
+                <span class="tag">MoveIt2</span>
+                <span class="tag">Gazebo</span>
+                <span class="tag">Motion Planning</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: ROS2 DC Motor Control -->
+        <article class="project-card glass-card" data-category="ros2">
+          <div class="project-header">
+            <h2>ROS2 DC Motor Control System</h2>
+            <span class="project-meta">Manchester Robotics | Feb 2025 </span>
+          </div>
+          <div class="project-content">
+            <div class="media-container">
+              <img src="assets/ROS2_control.png" alt="System Block Diagram" class="project-image" onclick="toggleVideo('video5')">
+              <video class="project-video" id="video5">
+                <source src="assets/ROS2_control_video.mp4" type="video/mp4">
+              </video>
+              <div class="project-buttons">
+                <button class="btn video-btn" onclick="toggleVideo('video5')">
+                  <i class="fas fa-play"></i> Show Demo
+                </button>
+              </div>
+            </div>
+            <div class="project-details">
+              <h3>Key Features</h3>
+              <ul class="achievements-list">
+                <li>Distributed ROS2 architecture</li>
+                <li>Real-time PID control via ROS topics</li>
+                <li>Encoder feedback implementation</li>
+                <li>Simulated vs real-world analysis</li>
+              </ul>
+              <div class="tech-tags">
+                <span class="tag">ROS2</span>
+                <span class="tag">micro-ROS</span>
+                <span class="tag">PID Control</span>
+                <span class="tag">ESP32</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2025 Juan José Jáuregui Barba. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="scripts/script.js"></script>
+  <script>
+    // Función para filtrar proyectos
+    function filterProjects(category) {
+      const projects = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+      
+      // Actualizar botones activos
+      buttons.forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      
+      // Mostrar/ocultar proyectos según la categoría
+      projects.forEach(project => {
+        if (category === 'all' || project.dataset.category === category) {
+          project.classList.remove('hidden');
+        } else {
+          project.classList.add('hidden');
+        }
+      });
+    }
+    
+    // Event listeners para los botones de filtro
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const category = button.dataset.filter;
+          filterProjects(category);
+        });
+      });
+    });
+    
+    // Función para alternar videos
+    function toggleVideo(videoId) {
+      const video = document.getElementById(videoId);
+      const img = video.previousElementSibling;
+      
+      if (video.style.display === 'block') {
+        video.style.display = 'none';
+        img.style.display = 'block';
+        video.pause();
+      } else {
+        video.style.display = 'block';
+        img.style.display = 'none';
+        video.play();
+      }
+    }
+  </script>
+</body>
+</html>
