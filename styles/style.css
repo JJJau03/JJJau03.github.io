@@ -109,6 +109,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 100;
+  gap: 20px;
   padding: 1rem 2rem;
   background: var(--nav-bg);
   backdrop-filter: blur(10px);
@@ -127,6 +128,7 @@ body {
 .glass-nav ul {
   display: flex;
   flex-wrap: nowrap;
+  margin-left: 5px;
   gap: 1.5rem; /* Increase spacing between buttons */
   list-style: none;
   margin-left: auto; /* Pushes buttons slightly to the left */
@@ -139,6 +141,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   position: relative;
+  gap: 1.5rem;
   padding: 0.5rem 0;
   transition: color 0.3s;
 }
@@ -149,6 +152,7 @@ body {
   bottom: 0;
   left: 0;
   width: 0;
+  gap: 1.5rem;
   height: 2px;
   background: var(--accent);
   transition: width 0.3s;
@@ -157,6 +161,7 @@ body {
 .glass-nav a:hover::after,
 .glass-nav a.active::after {
   width: 100%;
+  gap: 1.5rem;
 }
 
 .glass-nav a:hover {
@@ -168,7 +173,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  min-height: 70vh;
+  min-height: 50vh;
   padding-top: 1rem;
   gap: 2rem;
 }
