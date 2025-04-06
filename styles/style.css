@@ -5,10 +5,10 @@
   --bg-secondary: #172a45;
   --text-primary: #ccd6f6;
   --text-secondary: #8892b0;
-  --accent: #e27815; /*#cc6a43*/
+  --accent: #8eb16d; /*#3786bb*/ 
   --nav-bg: rgba(10, 25, 47, 0.9);
   --glass-effect: rgba(100, 255, 218, 0.1);
-  /* Add these new variables for buttons */
+  
   --filter-btn-bg: rgba(255, 255, 255, 0.1);
   --filter-btn-text: white;
   --filter-btn-border: rgba(255, 255, 255, 0.2);
@@ -25,13 +25,13 @@
   --accent: #3d5bbc;
   --nav-bg: rgba(248, 249, 250, 0.9);
   --glass-effect: rgba(0, 119, 182, 0.1);
-  /* Update these for light mode */
+  
   --filter-btn-bg: rgba(0, 0, 0, 0.05);
   --filter-btn-text: var(--text-primary);
   --filter-btn-border: rgba(0, 0, 0, 0.1);
   --filter-btn-hover: rgba(0, 0, 0, 0.1);
   --filter-btn-active-bg: var(--accent);
-  --filter-btn-active-text: white; /* Light text on accent color */
+  --filter-btn-active-text: white; /
 }
 
 * {
@@ -416,7 +416,7 @@ body {
 
 .project-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   padding: 2rem;
 }
