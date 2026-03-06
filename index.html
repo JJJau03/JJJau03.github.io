@@ -1,127 +1,461 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan José Jáuregui Barba | Robotics Student</title>
+  <meta name="description" content="Portfolio of Juan Jose Jauregui Barba, Robotics and Digital Systems Engineering student.">
+  <title>Juan Jose Jauregui | Robotics Engineer</title>
   <link rel="icon" href="assets/favicon-32x32.png" type="image/png">
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <div class="bg-elements">
-      <div class="circle"></div>
-      <div class="square"></div>
-      <div class="triangle"></div>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-nav" href="assets/CV.pdf" download>CV ↓</a>
     </div>
-    <nav class="glass-nav flex flex-row gap-8 justify-between items-center w-full h-min" style="padding: 10px;">
-      <div class="nav-brand">JJJ</div>
-      <ul class="flex flex-row gap-4">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li>
-          <button id="theme-toggle" class="cursor-pointer" aria-label="Toggle theme">
-            <i class="fas fa-moon"></i>
-          </button>
-        </li>
-      </ul>
-    </nav>
+  </header>
 
-    <main class="hero h-min">
-      <div class="hero-content">
-        <h1 class="greeting">Hi, I'm <span class="highlight">Juan José</span></h1>
-        <h2 class="subtitle">Robotics and Digital Systems Engineering Student</h2>
-        <div class="cta-buttons">
-          <a href="projects.html" class="btn primary">View Projects</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-layout">
+
+        <div class="hero-left">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for opportunities
+          </div>
+
+          <h1 class="hero-name">Juan José Jáuregui Barba</h1>
+
+          <p class="hero-title">Robotics &amp; Digital Systems Engineer</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-outline" href="assets/CV.pdf" download>Download CV</a>
+          </div>
+
+          <div class="hero-links">
+            <a href="https://github.com/JJJau03" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              JJJau03
+            </a>
+            <a href="https://linkedin.com/in/juanjojauregui" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              juanjojauregui
+            </a>
+          </div>
         </div>
-      </div>
-    </main>
 
+        <div class="hero-right">
+          <div class="profile-wrap">
+            <div class="profile-img-frame">
+              <img src="assets/me.png" alt="Juan Jose Jauregui Barba">
+            </div>
+            <div class="profile-tag tag-location">
+              <svg viewBox="0 0 20 20" fill="currentColor" width="12"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+              Monterrey, México
+            </div>
+            <div class="profile-tag tag-status">
+              <svg viewBox="0 0 20 20" fill="currentColor" width="12"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>
+              ITESM '26
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
     <section id="about" class="section">
-      <div class="section-header">
-        <h2>About <span class="highlight">Me</span></h2>
-        <div class="divider"></div>
-        <p class="subtitle">I'm studying Robotics and Digital Systems Engineering at 
-          Tecnológico de Monterrey. I love working with robots, control systems, and embedded electronics. 
-          Right now I'm especially interested in ROS2, computer vision, robot arms, self-navigation systems, 
-          and neural networks. I'm always excited to learn new things and take on interesting challenges.
-        </p>
-      </div>
-      <div class="about-content">
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="section-header">
-        <h2>Technical <span class="highlight">Skills</span></h2>
-        <div class="divider"></div>
-      </div>
-      <div class="skills-container">
-        <div class="skill-category">
-          <h3>Robotics</h3>
-          <div class="skills-tags">
-            <span class="skill-tag">ROS/ROS2</span>
-            <span class="skill-tag">Gazebo/RViz</span>
-            <span class="skill-tag">MoveIt</span>
-            <span class="skill-tag">Control Systems</span>
-            <span class="skill-tag">Computer Vision</span>
-          </div>
+      <div class="container two-col">
+        <div>
+          <p class="section-label">About Me</p>
+          <h2>About</h2>
         </div>
+        <div class="about-text">
+          <p>
+            I'm a Robotics and Digital Systems Engineering student at Tecnológico de Monterrey. I enjoy building intelligent systems that connect software with the physical world, working across robotics software, embedded systems, and perception.
 
-        <div class="skill-category">
-          <h3>Programming</h3>
-          <div class="skills-tags">
-            <span class="skill-tag">C++/Python</span>
-            <span class="skill-tag">Embedded C</span>
-            <span class="skill-tag">MATLAB</span>
-            <span class="skill-tag">Simulink</span>
-            <span class="skill-tag">VHDL</span>
-          </div>
-        </div>
+I’m especially interested in developing solutions that move from simulation to real-world deployment, turning ideas into working systems you can see and interact with.
 
-        <div class="skill-category">
-          <h3>Hardware</h3>
-          <div class="skills-tags">
-            <span class="skill-tag">STM32</span>
-            <span class="skill-tag">FPGA</span>
-            <span class="skill-tag">Arduino</span>
-            <span class="skill-tag">Communication Protocols</span>
-            <span class="skill-tag">SolidWorks</span>
-          </div>
+Outside of engineering, I enjoy going on hikes, building hands-on projects, and working with 3D printers to bring ideas to life.
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="section-header">
-        <h2>Get In <span class="highlight">Touch</span></h2>
-        <div class="divider"></div>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section alt">
+      <div class="container">
+        <p class="section-label">Experience</p>
+        <h2>Work experience</h2>
+        <div class="timeline">
+
+          <article class="tl-item">
+            <div class="tl-marker"></div>
+            <div class="tl-content">
+              <div class="tl-header">
+                <div>
+                  <h3>National Institute of Advanced Industrial Science and Technology (AIST)</h3>
+                  <p class="tl-role">Technical Training · Tokyo, Japan</p>
+                </div>
+                <span class="tl-date">Aug 2025 – Jan 2026</span>
+              </div>
+              <p>
+                Developed reinforcement learning environments in Isaac Lab for robotic arm and dexterous hand manipulation. Trained and tested behaviors in simulation, and built a sim-to-real deployment pipeline using ROS 2 and ros2_control.
+              </p>
+              <div class="tl-tags">
+                <span>Isaac Lab</span><span>Reinforcement Learning</span><span>ROS 2</span><span>Sim2Real</span><span>ROS2 control</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
       </div>
-      <div class="contact-content">
-        <div class="contact-methods">
-   
-          <a href="https://linkedin.com/in/juanjojauregui" class="contact-card">
-            <i class="fab fa-linkedin"></i>
-            <span>LinkedIn</span>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="section-label">Projects</p>
+        <h2>Selected work</h2>
+        <div class="project-grid">
+
+          <!-- P1 -->
+          <article class="project-card featured">
+            <div class="project-media-wrap">
+              <video class="project-media" autoplay muted loop playsinline preload="metadata" poster="assets/ROS2_control.png">
+                <source src="assets/puzzlebot.MP4" type="video/mp4">
+              </video>
+              <span class="proj-tag">Autonomy</span>
+            </div>
+            <div class="project-body">
+              <p class="proj-meta">Mar – Jun 2025 · Manchester Robotics</p>
+              <h3>Autonomous Diff-Drive Navigation</h3>
+              <p>Jetson-based robot with YOLOv8 detection, HSV color segmentation, PID line following, and a behavior-tree state machine for full mission coordination on a custom "B-shaped" track.</p>
+              <div class="proj-stack">
+                <span>ROS 2</span><span>Computer Vision</span><span>YOLOv8</span><span>Jetson Nano</span><span>PID</span><span>BehaviorTree</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-small btn-outline" href="https://github.com/JJJau03/puzzlebot_autonomous_system.git" target="_blank" rel="noreferrer">Repo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- P2 -->
+          <article class="project-card featured">
+            <div class="project-media-wrap">
+              <video class="project-media" autoplay muted loop playsinline preload="metadata" poster="assets/moveo_ROS2.png">
+                <source src="assets/moveo.mp4" type="video/mp4">
+              </video>
+              <span class="proj-tag">Manipulation</span>
+            </div>
+            <div class="project-body">
+              <p class="proj-meta">Jan – Feb 2025 · Personal Project</p>
+              <h3>ROS 2 Arm Motion Planning</h3>
+              <p>Moveo 5-DOF arm modeling and motion planning using URDF/Xacro, RViz, Gazebo, and MoveIt 2. Implemented OMPL trajectory planning and custom controllers for precision manipulation tasks.</p>
+              <div class="proj-stack">
+                <span>ROS 2</span><span>MoveIt 2</span><span>Gazebo</span><span>OMPL</span><span>URDF/Xacro</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-small btn-outline" href="https://github.com/JJJau03/moveo_RoboticArm_ROS2" target="_blank" rel="noreferrer">Repo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- P3 -->
+          <article class="project-card">
+            <div class="project-media-wrap">
+              <img class="project-media" src="assets/6dpose.png" alt="6-DoF oil pan tracking pipeline and registration results">
+              <span class="proj-tag">Perception</span>
+            </div>
+            <div class="project-body">
+              <p class="proj-meta">May – Jul 2025 · MICAI 2025</p>
+              <h3>6-DoF Oil Pan Tracking with xArm</h3>
+              <p>Real-time 6-DoF tracking system using Azure Kinect RGB-D data and ROS2 Humble. A custom YOLOv8 model segments the oil pan, depth masking builds the object point cloud, and pose is estimated with RANSAC coarse alignment plus Wunsch refinement against a CAD model. The resulting transform drives xArm inverse kinematics for continuous object-centered tracking.</p>
+              <div class="proj-stack">
+                <span>RGB-D</span><span>YOLOv8</span><span>RANSAC</span><span>xArm</span><span>ROS 2</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- P4 -->
+          <article class="project-card">
+            <div class="project-media-wrap">
+              <video class="project-media" autoplay muted loop playsinline preload="metadata" poster="assets/stm32-project.png">
+                <source src="assets/tractor_navigation.mp4" type="video/mp4">
+              </video>
+              <span class="proj-tag">Embedded</span>
+            </div>
+            <div class="project-body">
+              <p class="proj-meta">Aug – Nov 2024 · John Deere</p>
+              <h3>Waypoint Estimation for Autonomous Navigation</h3>
+              <p>STM32 embedded system integrating real-time IMU and encoder fusion for autonomous tractor navigation. Designed trajectory-tracking control algorithms with hands-on experience in data fusion and communication protocols.</p>
+              <div class="proj-stack">
+                <span>STM32</span><span>IMU</span><span>Encoder Fusion</span><span>C</span><span>Precision Ag</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- P5 -->
+          <article class="project-card">
+            <div class="project-media-wrap">
+              <video class="project-media" autoplay muted loop playsinline preload="metadata" poster="assets/fpga-unity.png">
+                <source src="assets/fpga-unity.png" type="image/png">
+              </video>
+              <span class="proj-tag">FPGA</span>
+            </div>
+            <div class="project-body">
+              <p class="proj-meta">Feb – Apr 2024 · John Deere</p>
+              <h3>FPGA + Unity Real-Time Simulation</h3>
+              <p>VHDL soft processor on Intel DE10-Lite reading accelerometer data via serial communication to drive a Unity simulation in real time. Demonstrated hardware validation via game-based visualization.</p>
+              <div class="proj-stack">
+                <span>VHDL</span><span>Intel DE10-Lite</span><span>Unity</span><span>Serial Comm</span>
+              </div>
+            
+            </div>
+          </article>
+
+          <!-- P6 -->
+          <article class="project-card">
+            <div class="project-media-wrap">
+              <video class="project-media" autoplay muted loop playsinline preload="metadata" poster="assets/ROS2_control.png">
+                <source src="assets/ROS2_control_video.mp4" type="video/mp4">
+              </video>
+              <span class="proj-tag">Control</span>
+            </div>
+            <div class="project-body">
+              <p class="proj-meta">Oct 2024 · John Deere</p>
+              <h3>DC Motor PID Control System with ROS2</h3>
+              <p>Closed-loop DC motor control system using ROS 2 and micro-ROS on an ESP32. Implemented real-time PID control over ROS topics with encoder feedback for accurate speed regulation and stable performance.</p>
+              <div class="proj-stack">
+                <span>PID</span><span>ROS2</span><span>micro-ROS</span><span>ESP32</span><span>Encoder</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- P7 -->
+          <article class="project-card">
+            <div class="project-media-wrap">
+              <video class="project-media" autoplay muted loop playsinline preload="metadata" poster="assets/ROS2_control.png">
+                <source src="assets/puzzlebot_coppeliaSim.mp4" type="video/mp4">
+              </video>
+              <span class="proj-tag">Simulation</span>
+            </div>
+            <div class="project-body">
+              <p class="proj-meta">CoppeliaSim · Puzzlebot</p>
+              <h3>Puzzlebot CoppeliaSim</h3>
+              <p>Built a ROS 2 and CoppeliaSim integration using ZMQ RemoteAPI to control robot wheels and stream camera data. Used OpenCV to detect and track a green ball, applied PID control for smooth movement, and designed a state machine for autonomous target tracking.</p>
+              <div class="proj-stack">
+                <span>ROS 2</span><span>CoppeliaSim</span><span>OpenCV</span><span>PID</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-small btn-outline" href="https://github.com/JJJau03/puzzlebot_coppeliaSim.git" target="_blank" rel="noreferrer">Repo ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <p class="section-label">Skills</p>
+        <h2>Technical expertise</h2>
+        <div class="skills-layout">
+
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <div class="skill-pills">
+              <span class="pill primary">C</span>
+              <span class="pill primary">C++</span>
+              <span class="pill primary">Python</span>
+              <span class="pill">Rust</span>
+              <span class="pill">CUDA</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Robotics & Simulation</h3>
+            <div class="skill-pills">
+              <span class="pill primary">ROS 2</span>
+              <span class="pill primary">ROS 1</span>
+              <span class="pill primary">MoveIt 2</span>
+              <span class="pill">Isaac Sim</span>
+              <span class="pill">Isaac Lab</span>
+              <span class="pill">Gazebo</span>
+              <span class="pill">Nav2</span>
+              <span class="pill">SLAM</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>AI & Perception</h3>
+            <div class="skill-pills">
+              <span class="pill primary">Reinforcement Learning</span>
+              <span class="pill primary">Deep Learning</span>
+              <span class="pill">Point Cloud Processing</span>
+              <span class="pill">Computer Vision</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Embedded & Hardware</h3>
+            <div class="skill-pills">
+              <span class="pill primary">STM32</span>
+              <span class="pill primary">Jetson Nano</span>
+              <span class="pill">Arduino</span>
+              <span class="pill">Raspberry Pi</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Tools & DevOps</h3>
+            <div class="skill-pills">
+              <span class="pill">Docker</span>
+              <span class="pill">Linux</span>
+              <span class="pill">MATLAB</span>
+              <span class="pill">SolidWorks</span>
+              <span class="pill">Git</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Certifications</h3>
+            <div class="skill-pills">
+              <span class="pill cert">SolidWorks CSWP 2025</span>
+              <span class="pill cert">SolidWorks CSWA 2024</span>
+              <span class="pill cert">Lean Six Sigma White Belt</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">Education</p>
+          <h2>Academic background</h2>
+        </div>
+        <div>
+          <div class="edu-card">
+            <div class="edu-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M3 9l9-4 9 4-9 4-9-4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 11.5V16c0 .8 2.2 2 5 2s5-1.2 5-2v-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Tecnológico de Monterrey (ITESM)</h3>
+              <p class="edu-sub">Robotics and Digital Systems Engineering · Campus Monterrey</p>
+              <p class="edu-date">Aug 2022 – Jun 2026</p>
+              <p class="edu-courses">Relevant courses: Intelligent Robotics, Control Systems, Advanced Embedded Systems, Robotics Foundation, System Design on Chip, Programmable Logic Design.</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <div class="edu-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 20h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M6 20V10l6-4 6 4v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 20v-4h4v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Liceo Internacional</h3>
+              <p class="edu-sub">High School · Quito, Ecuador</p>
+              <p class="edu-date">Sep 2019 – Jun 2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container contact-layout">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Let's build something together</h2>
+          <p class="contact-sub">I'm open to internship, research, and full-time opportunities in robotics, embedded systems, and autonomous systems.</p>
+        </div>
+        <div class="contact-links">
+          <a class="contact-item" href="mailto:jauregui.juanjo03@gmail.com">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M4 8l8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-val">jauregui.juanjo03@gmail.com</span>
+            </div>
           </a>
-          <a href="https://github.com/JJJau03" class="contact-card">
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
+          <a class="contact-item" href="https://linkedin.com/in/juanjojauregui" target="_blank" rel="noreferrer">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.7 8.8A1.8 1.8 0 106.7 5a1.8 1.8 0 000 3.7zM5.1 10.2h3.2V19H5.1v-8.8zM10.2 10.2h3v1.2h.1c.4-.8 1.4-1.5 2.8-1.5 3 0 3.6 2 3.6 4.6V19h-3.2v-3.9c0-.9 0-2.1-1.3-2.1s-1.5 1-1.5 2v4H10v-8.8z"/>
+              </svg>
+            </span>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-val">linkedin.com/in/juanjojauregui</span>
+            </div>
+          </a>
+          <a class="contact-item" href="https://github.com/JJJau03" target="_blank" rel="noreferrer">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6 0-.6 0-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1 .6-1.3-2.2-.3-4.5-1.1-4.5-4.8 0-1.1.4-2 1-2.6-.1-.3-.4-1.2.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.3.1 2.6.6.7 1 1.6 1 2.6 0 3.7-2.3 4.5-4.5 4.8.4.3.7.9.7 1.8V21c0 .3.2.6.7.5A10 10 0 0012 2z"/>
+              </svg>
+            </span>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-val">github.com/JJJau03</span>
+            </div>
           </a>
         </div>
       </div>
     </section>
-    <footer class="footer">
-      <div class="footer-content">
-        <p>© 2025 Juan José Jáuregui Barba. All rights reserved.</p>
-      </div>
-    </footer>
-  </div>
+  </main>
 
-  <script src="scripts/script.js"></script>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Juan Jose Jauregui Barba · Monterrey, Mexico</span>
+      <span>Robotics &amp; Digital Systems Engineering</span>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.project-card, .tl-item, .skill-group, .edu-card').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
