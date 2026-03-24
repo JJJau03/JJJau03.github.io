@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- NAV -->
   <header class="site-header">
@@ -36,11 +37,7 @@
       <div class="container hero-layout">
 
         <div class="hero-left">
-          <div class="hero-badge">
-            <span class="badge-dot"></span>
-            Available for opportunities
-          </div>
-
+          
           <h1 class="hero-name">Juan José Jáuregui Barba</h1>
 
           <p class="hero-title">Robotics &amp; Digital Systems Engineer</p>
@@ -448,14 +445,43 @@ Outside of engineering, I enjoy going on hikes, building hands-on projects, and 
   </footer>
 
   <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.project-card, .tl-item, .skill-group, .edu-card').forEach(el => {
-      el.classList.add('reveal');
-      observer.observe(el);
+    // Scroll progress bar
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+      progressBar.style.width = pct + '%';
+    }, { passive: true });
+
+    // Active nav highlighting
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const link = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35 });
+    sections.forEach(s => navObserver.observe(s));
+
+    // Staggered scroll reveal
+    const revealEls = document.querySelectorAll('.project-card, .tl-item, .skill-group, .edu-card');
+    const parents = new Map();
+    revealEls.forEach(el => {
+      const p = el.parentElement;
+      if (!parents.has(p)) parents.set(p, []);
+      parents.get(p).push(el);
     });
+    parents.forEach(children => {
+      children.forEach((el, i) => el.style.setProperty('--reveal-delay', `${i * 0.09}s`));
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }});
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => { el.classList.add('reveal'); revealObserver.observe(el); });
   </script>
 </body>
 </html>
