@@ -194,10 +194,10 @@ Outside of engineering, I enjoy going on hikes, building hands-on projects, and 
             </div>
             <div class="project-body">
               <p class="proj-meta">Jan – Feb 2025 · Personal Project</p>
-              <h3>ROS 2 Arm Motion Planning</h3>
-              <p>Moveo 5-DOF arm modeling and motion planning using URDF/Xacro, RViz, Gazebo, and MoveIt 2. Implemented OMPL trajectory planning and custom controllers for precision manipulation tasks.</p>
+              <h3>Moveo Robotic Arm — Motion Planning &amp; LLM Control</h3>
+              <p>Moveo 5-DOF arm modeling and motion planning using URDF/Xacro, RViz, Gazebo, and MoveIt 2/OMPL, with gripper control for pick-and-place tasks and a hardware interface for deployment on the real arm. Added a natural-language control layer where the Claude API translates plain-English commands into MoveIt 2 goals via a ROS 2 node.</p>
               <div class="proj-stack">
-                <span>ROS 2</span><span>MoveIt 2</span><span>Gazebo</span><span>OMPL</span><span>URDF/Xacro</span>
+                <span>ROS 2</span><span>MoveIt 2</span><span>Gazebo</span><span>OMPL</span><span>URDF/Xacro</span><span>Claude API</span>
               </div>
               <div class="project-links">
                 <a class="btn btn-small btn-outline" href="https://github.com/JJJau03/moveo_RoboticArm_ROS2" target="_blank" rel="noreferrer">Repo ↗</a>
@@ -238,6 +238,25 @@ Outside of engineering, I enjoy going on hikes, building hands-on projects, and 
               <p>STM32 embedded system integrating real-time IMU and encoder fusion for autonomous tractor navigation. Designed trajectory-tracking control algorithms with hands-on experience in data fusion and communication protocols.</p>
               <div class="proj-stack">
                 <span>STM32</span><span>IMU</span><span>SPI</span><span>UART</span><span>CAN</span><span>C</span><span>RTOS</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- P4.5 -->
+          <article class="project-card">
+            <div class="project-media-wrap">
+              <img class="project-media" src="assets/stm32_rpi.png" alt="Smart Tractor Monitor STM32 and Raspberry Pi hardware">
+              <span class="proj-tag">Embedded</span>
+            </div>
+            <div class="project-body">
+              <p class="proj-meta">Feb – Jun 2024 · John Deere · ITESM</p>
+              <h3>Smart Tractor Monitor</h3>
+              <p>Smart tractor driving system in collaboration with John Deere. An STM32F103 running a 4-task RMS-scheduled RTOS measures motor speed via an accelerometer, manages gear changes, and streams data over FTDI/UART to a Raspberry Pi that visualizes parameters in real time with Python and issues control commands back to the microcontroller.</p>
+              <div class="proj-stack">
+                <span>STM32F103</span><span>Raspberry Pi</span><span>FTDI</span><span>Python</span><span>RTOS</span><span>Accelerometer</span>
+              </div>
+              <div class="project-links">
+                <a class="btn btn-small btn-outline" href="assets/John_Deere_stm32_rpi.pdf" target="_blank" rel="noreferrer">Paper ↗</a>
               </div>
             </div>
           </article>
@@ -425,8 +444,6 @@ Outside of engineering, I enjoy going on hikes, building hands-on projects, and 
       <div class="container contact-layout">
         <div>
           <p class="section-label">Contact</p>
-          <h2>Let's build something together</h2>
-          <p class="contact-sub">I'm open to internship, research, and full-time opportunities in robotics, embedded systems, and autonomous systems.</p>
         </div>
         <div class="contact-links">
           <a class="contact-item" href="mailto:jauregui.juanjo03@gmail.com">
