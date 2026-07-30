@@ -23,6 +23,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#publications">Publications</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -57,6 +58,10 @@
             <a href="https://linkedin.com/in/juanjojauregui" target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               juanjojauregui
+            </a>
+            <a href="https://scholar.google.com/citations?user=RNb2UXoAAAAJ&hl=en" target="_blank" rel="noreferrer" aria-label="Google Scholar">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L0 9.5l4.36 3.4V19l7.64 4 7.64-4v-6.1L22 11.15V17h2V9.5L12 0zm0 2.5l7.36 5.75L12 14 4.64 8.25 12 2.5zm5.64 14.9L12 20.6l-5.64-3.2v-3.53L12 17l5.64-3.13v3.53z"/></svg>
+              Google Scholar
             </a>
           </div>
         </div>
@@ -205,25 +210,6 @@ Outside of engineering, I enjoy going on hikes, building hands-on projects, and 
             </div>
           </article>
 
-          <!-- P3 -->
-          <article class="project-card">
-            <div class="project-media-wrap">
-              <img class="project-media" src="assets/6dpose.png" alt="6-DoF oil pan tracking pipeline and registration results">
-              <span class="proj-tag">Perception</span>
-            </div>
-            <div class="project-body">
-              <p class="proj-meta">May – Jul 2025 · MICAI 2025 · ITESM</p>
-              <h3>6-DoF Oil Pan Tracking with xArm</h3>
-              <p>Real-time 6-DoF tracking system using Azure Kinect RGB-D data and ROS2 Humble. A custom YOLOv8 model segments the oil pan, depth masking builds the object point cloud, and pose is estimated with RANSAC coarse alignment plus Wunsch refinement against a CAD model. The resulting transform drives xArm inverse kinematics for continuous object-centered tracking.</p>
-              <div class="proj-stack">
-                <span>RGB-D</span><span>YOLOv8</span><span>RANSAC</span><span>xArm</span><span>ROS 2</span>
-              </div>
-              <div class="project-links">
-                <a class="btn btn-small btn-outline" href="https://link.springer.com/chapter/10.1007/978-3-032-08704-1_3" target="_blank" rel="noreferrer">Paper ↗</a>
-              </div>
-            </div>
-          </article>
-
           <!-- P4 -->
           <article class="project-card">
             <div class="project-media-wrap">
@@ -319,6 +305,33 @@ Outside of engineering, I enjoy going on hikes, building hands-on projects, and 
             </div>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">Publications</p>
+          <h2>Research</h2>
+        </div>
+        <div>
+          <article class="project-card">
+            <div class="project-media-wrap">
+              <img class="project-media project-media-contain pub-media" src="assets/6dpose.png" alt="6-DoF oil pan tracking pipeline and registration results">
+              <span class="proj-tag">Perception</span>
+            </div>
+            <div class="project-body">
+              <p class="proj-meta">MICAI 2025 Posters Track · 24th Mexican International Conference on Artificial Intelligence, pp. 28–36</p>
+              <h3>Tracking a Small Oil Pan with xArm Using RGB-D Data and Deep Pose Estimation</h3>
+              <p>R. J. H. Cruz, J. J. Jáuregui Barba, G. D. R. Alatorre, L. A. M. Ubando</p>
+              <div class="project-links">
+                <a class="btn btn-small btn-outline" href="https://link.springer.com/chapter/10.1007/978-3-032-08704-1_3" target="_blank" rel="noreferrer">Paper ↗</a>
+                <a class="btn btn-small btn-outline" href="assets/poster-oilpan.jpg" target="_blank" rel="noreferrer">Poster ↗</a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>

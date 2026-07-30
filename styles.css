@@ -403,6 +403,9 @@ nav { flex: 1; }
 .project-media-contain {
   object-fit: contain;
 }
+.pub-media {
+  aspect-ratio: 21/9;
+}
 
 .placeholder-media {
   width: 100%;
@@ -530,7 +533,6 @@ nav { flex: 1; }
 .edu-sub { font-size: 0.88rem; color: var(--text); font-weight: 600; margin-bottom: 0.2rem; }
 .edu-date { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.4rem; }
 .edu-courses { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
-
 /* ============================================================ CONTACT */
 .contact-layout {
   display: grid;
